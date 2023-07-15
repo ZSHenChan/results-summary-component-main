@@ -52,7 +52,7 @@
 .box .left .circle p{
     font-size: 0.8rem;
 }
-.box .left h1, h2{
+.box .left h1, .box .left h2{
     color: white;
 }
 .box .left h2{
@@ -64,7 +64,54 @@
 }
 
 .box .right{
+    display: flex;
+    flex-direction: column;
     min-width: 48%;
-    background-color: white;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.box .right .rec-1{
+    color: hsl(0, 100%, 67%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    min-width: 80%;
+    min-height: 50px;
+    background-color: hsl(0, 58%, 95%);
+    margin-bottom: 10px;
+}
+.box .right .rec-2{
+    color: hsl(39, 100%, 56%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    min-width: 80%;
+    min-height: 50px;
+    background-color: hsl(39, 100%, 95%);
+    margin-bottom: 10px;
+}
+.box .right .rec-3{
+    color: hsl(166, 100%, 37%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    min-width: 80%;
+    min-height: 50px;
+    background-color: hsl(166, 100%, 95%);
+    margin-bottom: 10px;
+}
+.box .right .rec-4{
+    color: hsl(234, 85%, 45%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    min-width: 80%;
+    min-height: 50px;
+    background-color: hsl(234, 85%, 90%);
+    margin-bottom: 10px;
 }
