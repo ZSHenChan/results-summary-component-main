@@ -7,7 +7,7 @@
 
 .container{
     display: flex;
-    min-height: 100vh;
+    min-height: 120vh;
     background-color: white;
     justify-content: center;
     align-items: center;  
@@ -63,6 +63,7 @@
     max-width: 70%;
 }
 
+
 .box .right{
     display: flex;
     flex-direction: column;
@@ -73,12 +74,30 @@
 }
 .box .right .rec{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     border-radius: 10px;
     min-width: 80%;
     min-height: 50px;
     margin-bottom: 10px;
+}
+.box .right h2{
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    align-self: flex-start;
+}
+.box .right .rec .category{
+    padding-left: 10px;
+}
+.box .right .rec img{
+    margin-right: 10px;
+    transform: translateY(-2px);
+}
+.box .right .rec .marks{
+    padding-right: 10px;
+    color: grey;
 }
 .box .right .rec-1{
     color: hsl(0, 100%, 67%);
@@ -95,4 +114,26 @@
 .box .right .rec-4{
     color: hsl(234, 85%, 45%);
     background-color: hsl(234, 85%, 90%);
+}
+.box .right .rec .bold{
+    font-weight: bolder;
+    color: hsl(224, 30%, 27%);
+    padding-right: 5px;
+}
+.box .right button{
+    min-width: 80%;
+    min-height: 45px;
+    color: hsl(241, 100%, 89%);
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+}
+
+@media(max-width:375px){
+    .container .box{
+        flex-direction: column;
+        min-width: 90%;
+    }
 }
