@@ -12,8 +12,7 @@
   display: flex;
   border: $base-border-thickness solid #ddd;
   box-shadow: $base-box-shadow;
-  border-radius: math.div($base-border-radius, 4);
-  max-width: 40rem;
+  border-radius: $base-border-radius;
 
   h1, h2, h3 {
     color: $secondary;
@@ -65,20 +64,18 @@
   }
 }
 
-.summary {
-  display: flex;
-  flex-direction: column;
-  padding: $base-padding*1.5;
-  font-weight: 600;
+
+.summary{
+  padding: $base-padding;
   
   .bar {
-    padding: $base-padding;
+    padding: $base-padding*0.75;
     border-radius: $base-border-radius;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: $base-margin;
+    min-width: 100%;
 
     .title {
       color: $button-color;
@@ -86,9 +83,19 @@
 
     div {
       display: flex;
+      flex-direction: row;
+      align-items: center;
       font-weight: 500;
+      width:auto;
+      text-wrap: nowrap;
+
+      &:first-child {
+        margin-right: auto;
+      }
+
       img {
-        margin-right: $base-margin;
+        margin-right: $base-margin*0.5;
+        width: $base-font-size*2;
       }
       span {
         font-weight: 600;
@@ -96,10 +103,10 @@
     }
     
   }
+
   h2 {
     color: $button-color;
     font-size: $base-font-size*1.1;
-    margin-bottom: $base-margin*1.5;
   }
 }
 

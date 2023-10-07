@@ -53,8 +53,13 @@ $breakpoints: (
     * {
       width: 50%;
     }
-    .bar {
-      width: 100%;
-    }
+  }
+}
+.score-display {
+  @include xs {
+    border-radius:0 0 $base-border-radius $base-border-radius;
+  }
+  @include md {
+    border-radius: $base-border-radius $base-border-radius $base-border-radius $base-border-radius;
   }
 }
