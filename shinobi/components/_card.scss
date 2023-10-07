@@ -1,0 +1,110 @@
+@use 'sass:math';
+@mixin centralise-col($bg-color) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: $bg-color;
+}
+
+.card {
+  display: flex;
+  border: $base-border-thickness solid #ddd;
+  box-shadow: $base-box-shadow;
+  border-radius: math.div($base-border-radius, 4);
+  max-width: 40rem;
+
+  h1, h2, h3 {
+    color: $secondary;
+    font-weight: 600;
+    margin-bottom: $base-margin;
+  }
+  p {
+    color: $primary;
+    font-weight: 400;
+  }
+
+  .score-display {
+    padding: $base-padding*2;
+  }
+  .card-title {
+    font-size: $base-font-size;
+    padding-bottom: $base-padding;
+    font-weight: bold;
+  }
+  .card-body {
+    font-size: $base-font-size;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  padding: 0;
+}
+
+.score-display {
+  @include centralise-col($background);
+}
+.scores {
+  border-radius: 50%;
+  background: $circle-background;
+  @include centralise-col($circle-background);
+  width: $base-padding*9;
+  height: $base-padding*9;
+  
+  h1 {
+    font-size: $base-font-size*3;
+  }
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  padding: $base-padding*1.5;
+  font-weight: 600;
+  
+  .bar {
+    padding: $base-padding;
+    border-radius: $base-border-radius;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $base-margin;
+
+    .title {
+      color: $button-color;
+    }
+
+    div {
+      display: flex;
+      font-weight: 500;
+      img {
+        margin-right: $base-margin;
+      }
+      span {
+        font-weight: 600;
+      }
+    }
+    
+  }
+  h2 {
+    color: $button-color;
+    font-size: $base-font-size*1.1;
+    margin-bottom: $base-margin*1.5;
+  }
+}
+
+
+// @debug math.div(10, 3);
+// @debug math.$pi;
+// @debug math.floor(2.6);
+// @debug math.max(1px, 20px, 15px, 12px);
